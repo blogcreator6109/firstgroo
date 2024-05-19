@@ -16,11 +16,11 @@
         class="wide"
         ref="video"
       />
-      <Youtube value="NHh3udthVDI" ref="video" />
+      <Youtube value="Zj-yQJa4Qo4" ref="video" />
       <Youtube value="dgsPOQv--HI" ref="video" />
       <Youtube value="0P_VQmfvH_4" ref="video" />
-      <Youtube value="Zj-yQJa4Qo4" ref="video" />
       <Youtube value="iaCvDy15zRs" ref="video" />
+      <Youtube value="NHh3udthVDI" ref="video" />
     </div>
   </div>
 </template>
