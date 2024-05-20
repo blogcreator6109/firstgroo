@@ -1,7 +1,10 @@
 <template>
   <div class="video" :class="{ active }">
     <video controls :poster="thumbnail" ref="video">
-      <source :src="src" type="video/mp4" />
+      <source
+        :src="'https://pub-aff0fbcc703d4dc28e7f8d3ff764b467.r2.dev/' + src"
+        type="video/mp4"
+      />
     </video>
   </div>
 </template>
@@ -31,12 +34,7 @@ onMounted(() => {
   observer = new IntersectionObserver(handleIntersect, {
     threshold: 0.3,
   });
-
-  video.value.load();
-  video.value.addEventListener("loadeddata", () => {
-    console.log("canplay");
-    observer.observe(video.value);
-  });
+  observer.observe(video.value);
 });
 </script>
 
