@@ -1,10 +1,7 @@
 <template>
   <div class="video" :class="{ active }">
-    <video controls :poster="thumbnail" ref="video">
-      <source
-        :src="'https://pub-aff0fbcc703d4dc28e7f8d3ff764b467.r2.dev/' + src"
-        type="video/mp4"
-      />
+    <video controls :poster="origin + thumbnail" ref="video">
+      <source :src="origin + src" type="video/mp4" />
     </video>
   </div>
 </template>
@@ -16,6 +13,7 @@ const props = defineProps({
 });
 
 const video = ref(null);
+const origin = "https://pub-aff0fbcc703d4dc28e7f8d3ff764b467.r2.dev/";
 
 const active = ref(false);
 let observer = null;
